@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cocktail Finder</string>
+    <string name="header_find_cocktails">Cocktail Finder</string>
+    <string name="text_how_to_search">View cocktails that start with a letter of your choice</string>
+    <string name="text_letter">Enter a letter here</string>
+    <string name="button_search">Search</string>
+    <string name="text_search_results">Search Results</string>
+    <string name="text_display_url">text_display_url</string>
+    <string name="drink_name_text">Drink Name</string>
+    <string name="star_image">Star Image</string>
+    <string name="drink_name">Name</string>
+    <string name="instructions_text">Load instructions here</string>
+</resources>
