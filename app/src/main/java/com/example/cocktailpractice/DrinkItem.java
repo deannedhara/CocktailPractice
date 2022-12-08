@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-
+/**
+ * @author Deanne
+ * DrinkItem class creates DrinkItems to use with DrinkAdapter class
+ */
 public class DrinkItem extends AppCompatActivity {
     private String mImageResource;
     private String mDrinkName;

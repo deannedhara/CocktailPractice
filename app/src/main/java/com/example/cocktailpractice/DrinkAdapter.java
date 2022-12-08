@@ -15,6 +15,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+/**
+ * @author Deanne Dhara
+ * DrinkAdapter class provides an adapter for the RecyclerView used in DrinkListActivity
+ */
 public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.DrinkViewHolder>{
     private ArrayList<DrinkItem> mDrinkList;
     private SelectListener mlistener;

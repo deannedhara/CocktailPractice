@@ -26,6 +26,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * @author Deanne Dhara
+ * Cocktail Finder lets users search for cocktail recipes by entering a letter.
+ * Currently, the recipe returned has instructions but is missing ingredients with
+ * measurements. This will be added in a future release.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
@@ -37,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     Drink[] drinking;
     ArrayList<DrinkItem> mDrinkItemList;
     ImageView mMainImage;
+    String mainImageUrl = "https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         mEditTextLetter = findViewById(R.id.editText_letter);
         mMainImage = findViewById(R.id.image_main);
 
-        Picasso.get().load("https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg").into(mMainImage);
+        Picasso.get().load(mainImageUrl).into(mMainImage);
         executorService = Executors.newSingleThreadExecutor();
 
         Button search = findViewById(R.id.button_search_letter);
@@ -119,12 +126,13 @@ public class MainActivity extends AppCompatActivity {
         Drink[] drinkObjects = new Drink[JSONCocktailObjects.length()];
 
         for (int i = 0; i < JSONCocktailObjects.length(); i++) {
-
             JSONObject drinkObject = JSONCocktailObjects.getJSONObject(i);
+
             name = drinkObject.getString("strDrink");
-            Log.i(LOG_TAG, name);
             image = drinkObject.getString("strDrinkThumb");
             instructions = drinkObject.getString("strInstructions");
+            Log.i(LOG_TAG, name);
+
             drinkObjects[i] = new Drink(name, image, instructions);
         }
         return drinkObjects;
@@ -156,5 +164,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return strInstructionsList;
     }
-
 }

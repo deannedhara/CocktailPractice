@@ -13,6 +13,10 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Scanner;
 
+/**
+ * @author Deanne Dhara
+ * NetworkUtils class contains methods that help access the data from the API
+ */
 public class NetworkUtils {
     final static String LETTER_BASE_URL =
             "https://thecocktaildb.com/api/json/v1/1/search.php?";
@@ -38,6 +42,12 @@ public class NetworkUtils {
         return url;
     }
 
+    /**
+     *
+     * @param queryString the URL of the API's data page
+     * @return String in JSON format of the cocktail data
+     * @throws IOException
+     */
     public static String getCocktailList(String queryString) throws IOException{
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;

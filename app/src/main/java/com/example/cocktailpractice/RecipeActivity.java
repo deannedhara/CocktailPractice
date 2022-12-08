@@ -8,7 +8,10 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-
+/**
+ * @author Deanne Dhara
+ * RecipeActivity class displays an individual cocktail recipe selected by the user.
+ */
 public class RecipeActivity extends AppCompatActivity {
     private TextView mDrinkName;
     private ImageView mDrinkImage;
